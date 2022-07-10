@@ -4,4 +4,5 @@ class Post < ApplicationRecord
     validates :content, presence: true, length: {minimum: 5, maximum: 500}
     has_rich_text :content
     has_many :comments, dependent: :destroy
+    belongs_to :user
 end
